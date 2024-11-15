@@ -46,6 +46,10 @@ def process_results(test_name, iterations):
 
 def run_test(test_name, mode, threads, iterations=1):
     shell_file_path = os.getcwd()+"/Execute_MySQL_Workload.sh"
+    print("\nConverting shell script to unix format..")
+    exec_shell_cmd(f"dos2unix {shell_file_path}", None)
+    print("\nGiving executable permission to shell script..")
+    exec_shell_cmd(f"chmod \+x {shell_file_path}", None)
     print("\nExecuting MySQL shell script..")
     exec_shell_cmd(f"{shell_file_path} {test_name} {mode} {threads} {iterations}", None)
     print("\nFinished executing the test! Sleeping for 15 seconds before parsing results..")
