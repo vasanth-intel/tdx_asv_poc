@@ -7,6 +7,7 @@
 [project]
 name = "tdx_asv_poc"
 # version is populated by setuptools in setup.py (from VERSION.txt)
+version = "0.1"
 # dynamic = ["version"]
 description = "The familiar example program in Python"
 # Newer versions of setuptools (that can detect metadata in pyproject.toml)
