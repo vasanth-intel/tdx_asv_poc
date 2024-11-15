@@ -45,7 +45,7 @@ def process_results(test_name, iterations):
     return tpt_dict['tpt_med']
 
 def run_test(test_name, mode, threads, iterations=1):
-    shell_file_path = os.getcwd()+"/mysql/Execute_MySQL_Workload.sh"
+    shell_file_path = os.getcwd()+"/Execute_MySQL_Workload.sh"
     print("\nExecuting MySQL shell script..")
     exec_shell_cmd(f"{shell_file_path} {test_name} {mode} {threads} {iterations}", None)
     print("\nFinished executing the test! Sleeping for 15 seconds before parsing results..")
