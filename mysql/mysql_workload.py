@@ -45,6 +45,9 @@ def process_results(test_name, iterations):
     return tpt_dict['tpt_med']
 
 def run_test(test_name, mode, threads, iterations=1):
+    print(f"\nCurrent working dir:", os.getcwd())
+    print(f"Directory contents are..")
+    exec_shell_cmd(f"ls -a", None)
     shell_file_path = os.getcwd()+"/Execute_MySQL_Workload.sh"
     print("\nConverting shell script to unix format..")
     exec_shell_cmd(f"dos2unix {shell_file_path}", None)
